@@ -1,5 +1,7 @@
 unique_ids:
-  forms: {}
+  forms:
+    Form1: '1675689831503544373451767.1972'
+    Form1.ItemTemplate1: '1675690931311969536370684.8856'
   modules: {}
   server_modules: {}
   assets:
