@@ -19,7 +19,8 @@ class Form1(Form1Template):
 
   def create_param_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    results = anvil.server.call('calculate_model',self.text_box_1.text )
+    results,name = anvil.server.call('calculate_model' )
+    self.evaluation1.text = name
     self.out = results
     # self.evaluation1.text = results
 
