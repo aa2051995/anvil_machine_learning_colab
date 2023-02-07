@@ -165,19 +165,20 @@ components:
     layout_properties: {x: 367.9712829589844, y: 66.30255126953125, width: 395.69050200000004}
     event_bindings: {pressed_enter: text_box_3_pressed_enter}
   - type: TextBox
-    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Number of Estimators,
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Number of tree depth,
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: '', bold: false, underline: false}
     name: maxdepth
-    layout_properties: {x: 368.00164794921875, y: 23.7257080078125, width: 395.68050200000005}
+    layout_properties: {x: 368.00164794921875, y: 23.715606689453125, width: 370.37750200000005}
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
     foreground: '', visible: true, text: Calculate the model, font_size: null, font: '',
     spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
     bold: false, underline: false, icon: ''}
-  name: button_2
+  name: modelwithparams
   layout_properties: {slot: default}
+  event_bindings: {click: modelwithparams_btn_2_click}
 - type: XYPanel
   properties: {height: 128}
   name: xy_panel_4
@@ -197,7 +198,7 @@ components:
       foreground: '', visible: true, text: '', font_size: null, auto_expand: false,
       font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
       bold: false, underline: false}
-    name: text_area_3
+    name: eval_with_param
     layout_properties: {x: -7.999595642089844, y: 42.47576904296875, width: 771.691502}
 - type: Link
   properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',

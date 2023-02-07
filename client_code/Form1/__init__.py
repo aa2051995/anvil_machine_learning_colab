@@ -48,6 +48,22 @@ class Form1(Form1Template):
     """This method is called when the user presses Enter in this text box"""
     pass
 
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+  def modelwithparams_btn_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    bootstrab = True if self.bootstrab.text == 'True' else False
+    results,eval = anvil.server.call('calculate_model_withparam',
+                                     int(self.num_estimators.text),
+                                     int(self.maxdepth.text), 
+                                     self.maxfeatures.text, 
+                                     bootstrab )
+    self.eval_with_param.text = eval 
+    
+
+
 
       
 
