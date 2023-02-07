@@ -1,5 +1,6 @@
 from ._anvil_designer import Form1Template
 from anvil import *
+import anvil.server
 
 class Form1(Form1Template):
   def __init__(self, **properties):
@@ -15,5 +16,19 @@ class Form1(Form1Template):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     pass
+
+  def create_param_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    results = anvil.server.call('calculate_model',self.text_box_1.text )
+    self.evaluation1.text = results
+
+  def file_loader_1_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
+    if file:
+      res = anvil.server.call('upload_excel_data', file)
+      self.text_box_1.text = res
+
+
+
 
 
