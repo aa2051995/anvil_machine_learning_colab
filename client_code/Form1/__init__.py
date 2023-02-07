@@ -27,6 +27,9 @@ class Form1(Form1Template):
     if file:
       res = anvil.server.call('upload_excel_data', file)
       self.text_box_1.text = res
+    else:
+      self.text_box_1.text = "nooo"
+      
 
 
 
