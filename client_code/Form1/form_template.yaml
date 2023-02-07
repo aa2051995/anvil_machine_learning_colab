@@ -32,32 +32,93 @@ components:
   name: button_1
   layout_properties: {slot: default}
   event_bindings: {click: button_1_click}
-- type: Label
-  properties: {}
-  name: label_1
+- type: XYPanel
+  properties: {height: 141}
+  name: xy_panel_1
   layout_properties: {slot: default}
-- type: RichText
-  properties: {}
-  name: rich_text_1
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Model Evaluation
+
+        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: label_1
+    layout_properties: {x: 9.991909980773926, y: 9.991912841796875, width: 370.995}
+  - type: TextArea
+    properties: {role: null, align: left, height: 111.2767, tooltip: '', placeholder: '',
+      border: '', enabled: false, foreground: '', visible: true, text: 'Mean Squared
+        Error: 71.098
+
+        Mean Squared Error: 8.432
+
+        Mean Absolute Error: 5.558
+
+        Median Absolute Error: 3.794
+
+        R2 Score: 0.958', font_size: null, auto_expand: false, font: '', spacing_above: small,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false}
+    name: text_area_1
+    layout_properties: {x: 0, y: 53.98261284179688, width: 765.686}
+- type: XYPanel
+  properties: {height: 121}
+  name: xy_panel_2
   layout_properties: {slot: default}
-  components: []
-- type: Label
-  properties: {}
-  name: label_2
+  components:
+  - type: TextArea
+    properties: {role: null, align: left, height: 70.2767, tooltip: '', placeholder: '',
+      border: '', enabled: false, foreground: '', visible: true, text: '(bootstrap=False,
+        max_depth=9, max_features=''log2'',
+
+        n_estimators=50, random_state=42)', font_size: null, auto_expand: false, font: '',
+      spacing_above: small, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false}
+    name: text_area_2
+    layout_properties: {x: 0, y: 60.831329345703125, width: 835.6985020000001}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Parameter, font_size: 20, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {x: 9.991909980773926, y: 24.4033203125, width: 159.992}
+- type: XYPanel
+  properties: {height: 201.76698303222656}
+  name: xy_panel_3
   layout_properties: {slot: default}
-- type: RichText
-  properties: {}
-  name: rich_text_2
-  layout_properties: {slot: default}
-- type: Label
-  properties: {}
-  name: label_3
-  layout_properties: {slot: default}
-- type: ColumnPanel
-  properties: {}
-  name: column_panel_1
-  layout_properties: {slot: default}
-- type: RepeatingPanel
-  properties: {item_template: Form1.ItemTemplate1}
-  name: repeating_panel_1
-  layout_properties: {slot: default}
+  components:
+  - type: Label
+    properties: {}
+    name: label_3
+    layout_properties: {x: 21.004852294921875, y: 23.039207458496094, width: 160}
+  - type: Label
+    properties: {}
+    name: label_4
+    layout_properties: {x: 20.995145797729492, y: 67.0287249023437, width: 159.992}
+  - type: Label
+    properties: {}
+    name: label_5
+    layout_properties: {x: 20.995145797729492, y: 111.01132988281245, width: 159.992}
+  - type: TextBox
+    properties: {}
+    name: text_box_2
+    layout_properties: {x: 393.0048522949219, y: 23.03802490234375, width: 160}
+  - type: TextBox
+    properties: {}
+    name: text_box_3
+    layout_properties: {x: 393.00164794921875, y: 67.0287249023437, width: 160}
+  - type: TextBox
+    properties: {}
+    name: text_box_4
+    layout_properties: {x: 393.00164794921875, y: 111.71113486328125, width: 159.992}
+  - type: TextBox
+    properties: {}
+    name: text_box_5
+    layout_properties: {x: 393.00164794921875, y: 171.723280859375, width: 159.992}
+  - type: Label
+    properties: {}
+    name: label_6
+    layout_properties: {x: 10, y: 163.52330000000006, width: 159.992}
+custom_component: true
+properties:
+- {name: prop, type: string, default_value: '', default_binding_prop: true}

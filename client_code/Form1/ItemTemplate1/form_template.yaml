@@ -5,9 +5,9 @@ components:
 - type: Label
   properties: {}
   name: label_2
-  layout_properties: {grid_position: 'DBRNUK,UTIQLR'}
+  layout_properties: {grid_position: 'DBRNUK,MBYJMD'}
 - type: TextBox
   properties: {}
   name: text_box_1
-  layout_properties: {grid_position: 'DBRNUK,GXSOBY'}
+  layout_properties: {grid_position: 'DBRNUK,MHWBTA'}
 is_package: true
