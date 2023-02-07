@@ -178,6 +178,7 @@ components:
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: link_1
   layout_properties: {slot: default}
+  event_bindings: {click: link_1_click}
 custom_component: true
 properties:
 - {name: prop, type: string, default_value: '', default_binding_prop: true}
