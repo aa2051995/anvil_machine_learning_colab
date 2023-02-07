@@ -15,7 +15,7 @@ components:
       align: center
       tooltip: ''
       border: ''
-      file_types: '.csv '
+      file_types: .csv,.xlsx
       enabled: true
       files: []
       foreground: ''

@@ -26,8 +26,11 @@ class Form1(Form1Template):
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
     if file:
-      res = anvil.server.call('upload_excel_data', file)
-      self.text_box_1.text = res
+      files = ["train","test"]
+      for i,name in enumerate(files):
+        ff = self.file_loader_1.files[i]
+        res = anvil.server.call('upload_excel_data', ff,ff.name)
+        self.text_box_1.text = res
     else:
       self.text_box_1.text = "nooo"
 
