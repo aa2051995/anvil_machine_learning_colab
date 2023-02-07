@@ -147,28 +147,29 @@ components:
         between [True, False]', border: '', enabled: true, foreground: '', visible: true,
       text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
       italic: false, background: '', bold: false, underline: false}
-    name: text_box_5
+    name: bootstrab
     layout_properties: {x: 368.00164794921875, y: 154.9757080078125, width: 395.68050200000005}
   - type: TextBox
     properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Number of Estimators,
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: '', bold: false, underline: false}
-    name: text_box_4
+    name: num_estimators
     layout_properties: {x: 367.99151611328125, y: 110.2952880859375, width: 395.68050200000005}
   - type: TextBox
     properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: 'Select
         between ["auto", "log2", "sqrt"]', border: '', enabled: true, foreground: '',
       visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text,
       spacing_below: small, italic: false, background: '', bold: false, underline: false}
-    name: text_box_3
+    name: maxfeatures
     layout_properties: {x: 367.9712829589844, y: 66.30255126953125, width: 395.69050200000004}
+    event_bindings: {pressed_enter: text_box_3_pressed_enter}
   - type: TextBox
     properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Number of Estimators,
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: '', bold: false, underline: false}
-    name: text_box_2
+    name: maxdepth
     layout_properties: {x: 368.00164794921875, y: 23.7257080078125, width: 395.68050200000005}
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,

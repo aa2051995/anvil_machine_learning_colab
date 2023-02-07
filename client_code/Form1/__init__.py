@@ -19,8 +19,12 @@ class Form1(Form1Template):
 
   def create_param_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    results,name = anvil.server.call('calculate_model' )
-    self.evaluation1.text = name
+    results,name,params = anvil.server.call('calculate_model' )
+    self.evaluation1.text = name 
+    self.bootstrab = params.bootstrap
+    self.num_estimators = params.n_estimators
+    self.maxdepth = params.max_depth
+    self.maxfeatures = params.max_features
     self.out = results
     # self.evaluation1.text = results
 
@@ -39,6 +43,11 @@ class Form1(Form1Template):
     """This method is called when the link is clicked"""
     m = self.out
     anvil.media.download(m)
+
+  def text_box_3_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
 
       
 
