@@ -44,7 +44,10 @@ components:
   name: setfeature
   layout_properties: {slot: default}
 - type: TextBox
-  properties: {}
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: 'Nettogewicht,
+      Länge in mm, Nirosta', border: '', enabled: true, foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false}
   name: text_box_1
   layout_properties: {slot: default}
   event_bindings: {pressed_enter: text_box_1_pressed_enter}
@@ -112,37 +115,61 @@ components:
   layout_properties: {slot: default}
   components:
   - type: Label
-    properties: {}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Max_Depth, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     name: label_3
-    layout_properties: {x: 21.004852294921875, y: 23.039207458496094, width: 160}
+    layout_properties: {x: 20.995145797729492, y: 23.03802490234375, width: 159.992}
   - type: Label
-    properties: {}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Max_Features, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     name: label_4
-    layout_properties: {x: 20.995145797729492, y: 67.0287249023437, width: 159.992}
+    layout_properties: {x: 20.995145797729492, y: 67.0206298828125, width: 159.992}
   - type: Label
-    properties: {}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: N_Estimators, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     name: label_5
-    layout_properties: {x: 20.995145797729492, y: 111.01132988281245, width: 159.992}
-  - type: TextBox
-    properties: {}
-    name: text_box_2
-    layout_properties: {x: 393.0048522949219, y: 23.03802490234375, width: 421}
-  - type: TextBox
-    properties: {}
-    name: text_box_3
-    layout_properties: {x: 393.00164794921875, y: 67.0287249023437, width: 421.00300000000004}
-  - type: TextBox
-    properties: {}
-    name: text_box_4
-    layout_properties: {x: 393.00164794921875, y: 111.71113486328125, width: 420.995}
-  - type: TextBox
-    properties: {}
-    name: text_box_5
-    layout_properties: {x: 393.00164794921875, y: 171.723280859375, width: 420.995}
+    layout_properties: {x: 20.995145797729492, y: 111.00323486328125, width: 159.992}
   - type: Label
-    properties: {}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: bootstrap, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     name: label_6
-    layout_properties: {x: 10, y: 163.52330000000006, width: 159.992}
+    layout_properties: {x: 20.995145797729492, y: 154.9939348632812, width: 159.992}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: 'Select
+        between [True, False]', border: '', enabled: true, foreground: '', visible: true,
+      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false}
+    name: text_box_5
+    layout_properties: {x: 368.00164794921875, y: 154.9757080078125, width: 395.68050200000005}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Number of Estimators,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_box_4
+    layout_properties: {x: 367.99151611328125, y: 110.2952880859375, width: 395.68050200000005}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: 'Select
+        between ["auto", "log2", "sqrt"]', border: '', enabled: true, foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false}
+    name: text_box_3
+    layout_properties: {x: 367.9712829589844, y: 66.30255126953125, width: 395.69050200000004}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Number of Estimators,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_box_2
+    layout_properties: {x: 368.00164794921875, y: 23.7257080078125, width: 395.68050200000005}
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
     foreground: '', visible: true, text: Calculate the model, font_size: null, font: '',
