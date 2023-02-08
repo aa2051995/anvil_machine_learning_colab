@@ -61,6 +61,12 @@ class Form1(Form1Template):
                                      self.maxfeatures.text, 
                                      bootstrab )
     self.eval_with_param.text = eval 
+
+  def download_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    m = self.out
+    anvil.media.download(m)
+
     
 
 
