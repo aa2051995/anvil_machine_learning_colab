@@ -48,7 +48,7 @@ components:
       Länge in mm, Nirosta', border: '', enabled: true, foreground: '', visible: true,
     text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
     italic: false, background: '', bold: false, underline: false}
-  name: text_box_1
+  name: features_txt
   layout_properties: {slot: default}
   event_bindings: {pressed_enter: text_box_1_pressed_enter}
 - type: Button
@@ -74,34 +74,23 @@ components:
     layout_properties: {x: 9.991909980773926, y: 9.991912841796875, width: 370.995}
   - type: TextArea
     properties: {role: null, align: left, height: 111.2767, tooltip: '', placeholder: '',
-      border: '', enabled: false, foreground: '', visible: true, text: 'Mean Squared
-        Error: 71.098
-
-        Mean Squared Error: 8.432
-
-        Mean Absolute Error: 5.558
-
-        Median Absolute Error: 3.794
-
-        R2 Score: 0.958', font_size: null, auto_expand: false, font: '', spacing_above: small,
-      spacing_below: small, italic: false, background: '', bold: false, underline: false}
+      border: '', enabled: false, foreground: '', visible: true, text: evaluation results,
+      font_size: null, auto_expand: false, font: '', spacing_above: small, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false}
     name: evaluation1
-    layout_properties: {x: 0, y: 53.98261284179688, width: 765.686}
+    layout_properties: {x: 0, y: 53.974517822265625, width: 740.3915020000001}
 - type: XYPanel
   properties: {height: 121}
   name: xy_panel_2
   layout_properties: {slot: default}
   components:
   - type: TextArea
-    properties: {role: null, align: left, height: 70.2767, tooltip: '', placeholder: '',
-      border: '', enabled: false, foreground: '', visible: true, text: '(bootstrap=False,
-        max_depth=9, max_features=''log2'',
-
-        n_estimators=50, random_state=42)', font_size: null, auto_expand: false, font: '',
-      spacing_above: small, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false}
-    name: text_area_2
-    layout_properties: {x: 0, y: 60.831329345703125, width: 835.6985020000001}
+    properties: {role: null, align: left, height: 70.2767, tooltip: '', placeholder: paramter after training,
+      border: '', enabled: false, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: params_txt
+    layout_properties: {x: 0, y: 60.831329345703125, width: 810.3955020000001}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Parameter, font_size: 20, font: '', spacing_above: small,
@@ -147,7 +136,7 @@ components:
         between [True, False]', border: '', enabled: true, foreground: '', visible: true,
       text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
       italic: false, background: '', bold: false, underline: false}
-    name: bootstrab
+    name: bootstrapPaparam
     layout_properties: {x: 368.00164794921875, y: 154.9757080078125, width: 395.68050200000005}
   - type: TextBox
     properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Number of Estimators,
@@ -170,7 +159,7 @@ components:
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: '', bold: false, underline: false}
     name: maxdepth
-    layout_properties: {x: 368.00164794921875, y: 23.715606689453125, width: 370.37750200000005}
+    layout_properties: {x: 368.00164794921875, y: 23.715606689453125, width: 395.6785020000001}
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
     foreground: '', visible: true, text: Calculate the model, font_size: null, font: '',
@@ -193,13 +182,11 @@ components:
     layout_properties: {x: 0, y: 9.991943359375, width: 159.992}
   - type: TextArea
     properties: {role: null, align: left, height: 139.6877107421875, tooltip: '',
-      placeholder: 'Mean Squared Error: 71.098 Mean Squared Error: 8.432 Mean Absolute
-        Error: 5.558 Median Absolute Error: 3.794 R2 Score: 0.958', border: '', enabled: false,
-      foreground: '', visible: true, text: '', font_size: null, auto_expand: false,
-      font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
-      bold: false, underline: false}
+      placeholder: eval after setting paramters, border: '', enabled: false, foreground: '',
+      visible: true, text: '', font_size: null, auto_expand: false, font: '', spacing_above: small,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false}
     name: eval_with_param
-    layout_properties: {x: -7.999595642089844, y: 42.47576904296875, width: 443.691502}
+    layout_properties: {x: -7.999595642089844, y: 42.47576904296875, width: 418.39450200000005}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: download, font_size: null, font: '', spacing_above: small,

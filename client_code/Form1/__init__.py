@@ -19,15 +19,18 @@ class Form1(Form1Template):
 
   def create_param_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    results,name,params = anvil.server.call('calculate_model' )
+    if self.features_txt.text !='':
+      features = self.features_txt.text.split(',')
+    else:
+       features = ''
+    results,name,params = anvil.server.call('calculate_model',features)
     self.evaluation1.text = name 
-    self.bootstrab = params.bootstrap
-    self.num_estimators = params.n_estimators
-    self.maxdepth = params.max_depth
-    self.maxfeatures = params.max_features
+    self.bootstrapPaparam.text = params['bootstrap']
+    self.num_estimators.text = params['n_estimators']
+    self.maxdepth.text = params['max_depth']
+    self.maxfeatures.text = params['max_features']
     self.out = results
-    # self.evaluation1.text = results
-
+    self.params_txt.text = "(bootstrap="+str(params['bootstrap'])+", n_estimators="+ str(params['n_estimators'])+", max_depth="+str(params['max_depth'])+", max_features="+str(params['max_features'])+")"
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
     if file:
@@ -54,13 +57,18 @@ class Form1(Form1Template):
 
   def modelwithparams_btn_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    bootstrab = True if self.bootstrab.text == 'True' else False
-    results,eval = anvil.server.call('calculate_model_withparam',
+    bootstrab = True if self.bootstrapPaparam.text == 'True' else False
+    if self.features_txt.text !='':
+      features = self.features_txt.text.split(',')
+    else:
+       features = ''
+    results,eval = anvil.server.call('calculate_model_withparam',features,
                                      int(self.num_estimators.text),
                                      int(self.maxdepth.text), 
                                      self.maxfeatures.text, 
                                      bootstrab )
     self.eval_with_param.text = eval 
+    self.out = results
 
   def download_2_click(self, **event_args):
     """This method is called when the button is clicked"""
