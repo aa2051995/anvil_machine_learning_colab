@@ -19,6 +19,11 @@ class Form1(Form1Template):
 
   def create_param_1_click(self, **event_args):
     """This method is called when the button is clicked"""
+    res = anvil.server.call('check_files')
+    if res == "no":
+      self.evaluation1.text = "please upload the train data.xlsx and test data.xlsx files  " +res 
+      return 
+   
     if self.features_txt.text !='':
       features = self.features_txt.text.split(',')
     else:
@@ -34,13 +39,11 @@ class Form1(Form1Template):
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
     if file:
-      files = ["train","test"]
-      for i,name in enumerate(files):
+      # files = ["train","test"]
+      for i,name in enumerate(self.file_loader_1.files):
         ff = self.file_loader_1.files[i]
         res = anvil.server.call('upload_excel_data', ff,ff.name)
-        self.text_box_1.text = res
-    else:
-      self.text_box_1.text = "nooo"
+      
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -57,18 +60,34 @@ class Form1(Form1Template):
 
   def modelwithparams_btn_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    bootstrab = True if self.bootstrapPaparam.text == 'True' else False
+    self.eval_with_param.text = ""
     if self.features_txt.text !='':
       features = self.features_txt.text.split(',')
     else:
-       features = ''
-    results,eval = anvil.server.call('calculate_model_withparam',features,
-                                     int(self.num_estimators.text),
-                                     int(self.maxdepth.text), 
-                                     self.maxfeatures.text, 
+      features = ''
+    try:
+      num_estimators = int(self.num_estimators.text)
+      maxdepth = int(self.maxdepth.text)
+      bootstrab = True if self.bootstrapPaparam.text == 'True' else False
+      if self.maxfeatures.text in  ["auto", "log2", "sqrt"]:
+        maxfeatures = self.maxfeatures.text
+      else:
+        self.eval_with_param.text = "enter parameter maxfeatures in the right format [auto, log2, sqrt]"
+        return 
+      self.eval_with_param.text = "calculate..."
+      results,eval = anvil.server.call('calculate_model_withparam',features,
+                                     num_estimators,
+                                     maxdepth, 
+                                     maxfeatures, 
                                      bootstrab )
-    self.eval_with_param.text = eval 
-    self.out = results
+      self.eval_with_param.text = eval 
+      self.out = results
+    except Exception as e:
+      
+      self.eval_with_param.text = str(e) #"enter the parameters in the right format" +e
+      
+      
+    
 
   def download_2_click(self, **event_args):
     """This method is called when the button is clicked"""
